@@ -1,3 +1,3 @@
-# This directory holds code in development
+# Code in development
 
 Insert description
