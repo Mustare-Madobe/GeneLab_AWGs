@@ -5,7 +5,7 @@ Insert short general description of the Plants AWG
 ---
 
 ## Select one of the following subdirectories to view or add content:
-- []()
+- [Manuscript_Code](Manuscript_Code)
 - []()
 - []()
 - []()
