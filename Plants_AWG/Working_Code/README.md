@@ -4,7 +4,7 @@ This directory holds code that is currently in development. The following sub-di
 
 ---
 
-## Code development topics:
+## Code Development Topics:
 
 - Insert link to subdirectory 1
 - Insert link subdirectory 2
