@@ -13,3 +13,6 @@ Insert short general description of AWGs
 ---
 
 ### To view or add references relevant to space biology in general, click [here](General_Space_Biology_References).
+
+---
+### Maintained by: Alex DongHyeon Seo
