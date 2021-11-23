@@ -1,3 +1,5 @@
+![Animals AWG logo](https://user-images.githubusercontent.com/92759843/142991294-463a91c1-3b4d-4ff8-8b19-058f4322e140.png)
+
 # Animals Analysis Working Group
 
 Insert short general description of the Animals AWG
