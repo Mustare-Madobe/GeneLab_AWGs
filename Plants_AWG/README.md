@@ -1,3 +1,5 @@
+![Plants AWG logo](https://user-images.githubusercontent.com/92759843/142992493-a0389a39-3a9a-402b-bf1f-4dafe8e38eb2.png)
+
 # Plants Analysis Working Group
 
 Insert short general description of the Plants AWG
