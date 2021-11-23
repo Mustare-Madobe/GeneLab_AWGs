@@ -10,10 +10,8 @@ GeneLab Analysis Working Groups (AWGs) are. The purpose of the AWGs is to optimi
 - [Multi-omics AWG](Multi-omics_AWG)
 - [Plants AWG](Plants_AWG)
 
----
-
 ### To view or add references relevant to space biology in general, click [here](General_Space_Biology_References).
 
 ---
-### Maintained by: Alex DongHyeon Seo
-### Contact: seodongh@usc.edu
+Maintained by: Alex DongHyeon Seo
+Contact: seodongh@usc.edu
