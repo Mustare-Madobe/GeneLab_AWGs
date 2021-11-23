@@ -1,3 +1,5 @@
+![Microbes AWG logo](https://user-images.githubusercontent.com/92759843/142991991-987fec3e-e9cd-4af4-9928-bf43f282bbc7.png)
+
 # Microbes Analysis Working Group
 
 Insert short general description of the Microbes AWG
