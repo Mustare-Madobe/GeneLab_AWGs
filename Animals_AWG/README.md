@@ -8,7 +8,7 @@ The Animals Analysis Working Group is comprised of international research scient
 - Tejaswini Mishra, Stanford University
 - Nathaniel Szewczyk, University of Nottingham
 
-## Select one of the following subdirectories to view the work done by Animals AWG members:
+## Select one of the following subdirectories to view their work:
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
