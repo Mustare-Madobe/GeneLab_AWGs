@@ -8,7 +8,7 @@ The Plants Analysis Working Group is comprised of international research scienti
 - Richard Barker, University of Wisconsin-Madison
 - Colin P.S. Kruse, Los Alamos National Lab
 
-## Select one of the following subdirectories to view their work:
+## Select one of the following subdirectories to view the group's work:
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
