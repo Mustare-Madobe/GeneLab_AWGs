@@ -4,9 +4,10 @@
 
 Insert short general description of the Multi-omics AWG
 
----
+## Current leads:
+- Afshin Beheshti, NASA Ames Research Center & Broad Institute
 
-## Select one of the following subdirectories to view or add content:
+## Select one of the following subdirectories to view their work:
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
