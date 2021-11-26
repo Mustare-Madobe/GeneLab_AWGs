@@ -2,7 +2,7 @@
 
 # Multi-omics Analysis Working Group
 
-Insert short general description of the Multi-omics AWG
+The Multi-omics/Systems Biology Analysis Working Group is comprised of international research scientists and professors working together with a shared goal of determining the best pipelines and analysis that can be done to relate different omics platforms that include transcriptomics, proteomics, metabolomics and methylation data. The group has developed cross-omics analysis through a network-based tool, and started visualization capabilities and participation with the GeneLab Visualization Working Group. The group's several projects have resulted in publications throughout the years, where they studided topics like Mitochondrial stress and radiation driving spaceflight health risks by using transcriptomic an proteomic data.    
 
 ## Current leads:
 - Afshin Beheshti, NASA Ames Research Center & Broad Institute
