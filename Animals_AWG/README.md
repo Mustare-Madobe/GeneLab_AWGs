@@ -2,11 +2,12 @@
 
 # Animals Analysis Working Group
 
-Insert short general description of the Animals AWG
+The Animal AWG aims to facilitate the use of omics in understanding basic mechanisms by which animals and constituent tissues and cells adapt to the spaceflight environment. Last year, this AWG also provided expertise on the adaptation of best practices for processing omics data in Genelab. To this end, the Animal AWG has contributed to the development of consensus analysis pipelines for generating higher order (processed) omics data. By making processed omics data publicly available, spaceflight omics results will be accessible to a wide range of users of varying skill levels and computational resources, thereby maximizing scientific discovery.
 
----
 
-## Select one of the following subdirectories to view or add content:
+
+
+## Select one of the following subdirectories to view the work done by Animals AWG members:
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
