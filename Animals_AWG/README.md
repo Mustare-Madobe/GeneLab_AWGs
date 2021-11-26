@@ -2,18 +2,11 @@
 
 # Animals Analysis Working Group
 
-The Animals Analysis Working Group is comprised of international research scientists and professors working together with a shared goal of facilitating the use of omics in understanding basic mechanisms by which animals and constituent tissues and cells adapt to the spaceflight environment. 
-
- AWG also provided expertise on the adaptation of best practices for processing omics data in Genelab. To this end, the Animal AWG has contributed to the development of consensus analysis pipelines for generating higher order (processed) omics data. By making processed omics data publicly available, spaceflight omics results will be accessible to a wide range of users of varying skill levels and computational resources, thereby maximizing scientific discovery.
-
-Current and upcoming activities are geared toward the development of manuscript(s) that demonstrate the power of omics in unraveling the mechanisms and shared molecular responses of animals during adaptation to the spaceflight environment
-
-The Animal AWG facilitates the use of omics in understanding basic mechanisms by which animals and constituent tissues and cells adapt to the spaceflight environment.
+The Animals Analysis Working Group is comprised of international research scientists and professors working together with a shared goal of facilitating the use of omics in understanding basic mechanisms and shared molecular responses by which animals and constituent tissues and cells adapt to the spaceflight environment. The group has contributed to the development of consensus analysis pipelines for generating higher-order omics data and cross species analysis of potential mechanisms controlling gene expression changes in response to spaceflight. Additionally, the group has been publishing collaborative papers throughout the years. 
 
 ## Current leads:
 - Tejaswini Mishra, Stanford University
 - Nathaniel Szewczyk, University of Nottingham
-
 
 ## Select one of the following subdirectories to view the work done by Animals AWG members:
 - [Manuscript Code](Manuscript_Code)
