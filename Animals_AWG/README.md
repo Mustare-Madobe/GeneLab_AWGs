@@ -2,7 +2,7 @@
 
 # Animals Analysis Working Group
 
-The Animals Analysis Working Group is comprised of international research scientists and professors working together with a shared goal of facilitating the use of omics in understanding basic mechanisms and shared molecular responses by which animals and constituent tissues and cells adapt to the spaceflight environment. The group has contributed to the development of consensus analysis pipelines for generating higher-order omics data and cross species analysis of potential mechanisms controlling gene expression changes in response to spaceflight.
+The Animals Analysis Working Group is comprised of researchers and professors working together with a shared goal of facilitating the use of omics in understanding basic mechanisms and shared molecular responses by which animals and constituent tissues and cells adapt to the spaceflight environment. The group has contributed to the development of consensus analysis pipelines for generating higher-order omics data and cross species analysis of potential mechanisms controlling gene expression changes in response to spaceflight.
 
 ## Current leads:
 - Tejaswini Mishra, Stanford University
