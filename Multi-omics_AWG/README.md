@@ -7,7 +7,7 @@ The Multi-omics/Systems Biology Analysis Working Group is comprised of internati
 ## Current leads:
 - Afshin Beheshti, NASA Ames Research Center & Broad Institute
 
-## Select one of the following subdirectories to view their work:
+## Select one of the following subdirectories to view the group's work:
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
