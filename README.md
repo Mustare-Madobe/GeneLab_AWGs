@@ -13,3 +13,12 @@ GeneLab is a science collaboration initiative that provides an open-access data 
 ---
 #### Maintained by: Alex DongHyeon Seo (Plants AWG)
 #### Contact: seodongh@usc.edu
+---
+#### *How to request to be a collaborator:*
+
+Please send an email to contact above and cc your AWG lead with folloing information,
+- Full name
+- Affiliation
+- GitHub username
+- AWG name
+- Summary of how/where the code was used along with its associated manuscript
