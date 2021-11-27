@@ -1,6 +1,6 @@
 # RACARA
 
-![RACARA_poster](https://github.com/GeneLab-AWG/GeneLab_AWGs/blob/main/Plants_AWG/Manuscript_Code/RACARA/RACARA_ASGSR%2048X48%20poster.png)
+![RACARA_poster](https://github.com/GeneLab-AWG/GeneLab_AWGs/blob/main/Plants_AWG/Manuscript_Code/RACARA/RACARA_ASGSR%20poster.png)
 
 Spaceflight studies present unprecedented insights into biological processes responding to a unique environmental situation that was not part of the evolutionary history of living organisms. Although access to space to perform primary experiments is limited, the flight research community has come together to deposit their experimental datasets, such as transcriptomics data, at NASA’s GeneLab data repository, with the goal of facilitating further analysis and extending the insights drawn from each individual spaceflight. In addition, GeneLab has reprocessed the transcriptome data using a ‘common’ pipeline to help standardize analyses between studies. We have therefore used the Paul/Ferl CARA (Characterizing Arabidopsis Root Attraction) experiment (GeneLab DataSet-120, GLDS-120) as a robust spaceflight dataset with which to explore the application of learning-model driven analyses to facilitate new insights into plant response to spaceflight.
 
