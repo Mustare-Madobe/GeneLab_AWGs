@@ -6,5 +6,4 @@ This directory holds code that is used in Plant AWG manuscripts. The following s
 
 ## Plant AWG Manuscripts:
 
-- Insert link to manuscript 1 subdirectory
-- Insert link to manuscript 2 subdirectory
+- [RACARA](RACARA)
