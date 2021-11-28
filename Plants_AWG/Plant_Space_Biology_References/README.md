@@ -1,11 +1,8 @@
-# References Relevant to Plant Space Biology
+# Plant Space Biology References
 
-This directory holds plant space biology relevant references. The following sub-directories further divide the plant space biology relevant references into specific topics. If an AWG member would like to add a reference that is not related to any of the topics listed, please create a new sub-directory with a title relevant to the topic of your reference(s).
-
----
+This directory holds lists of Space Biology references specific to the Botany field. Explore and share references from specific topics in the Botany related Space biology! More infromation followed on each topic's directory...
 
 ## Topics in Plant Space Biology:
 
-- Insert link to topic 1 subdirectory
-- Insert link to topic 2 subdirectory
+- *coming soon...*
 
