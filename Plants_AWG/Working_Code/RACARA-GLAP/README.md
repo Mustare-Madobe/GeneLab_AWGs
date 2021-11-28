@@ -5,7 +5,7 @@ GLAP(GeneLab Analysis Pipeline) is a R package in development that is based on t
 This R pacakage includes following contents step by step:
 - Explore metadata of GLDS datasets 
 - Download available csv datsets using RestAPI 
-- Review dataset
+- Review target dataset
 - Outlier detection
 - Representation learning
 - Clustering
