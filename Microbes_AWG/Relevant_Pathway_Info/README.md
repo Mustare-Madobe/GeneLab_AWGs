@@ -1,6 +1,6 @@
 # Pathways/Genes Relevant to Microbe Space Biology
 
-This directory holds pathways and associated genes that were found from Microbe Space Biology experiments. Explore pathways and associated genes from different categories in Microbe Space Biology and pull insights that could be applicable to your own projects! We encourage AWG members to share and review pathways and associated gene lists from other AWGs too. More information followed on each category's directory...
+This directory holds pathways and associated genes that were found from Microbe Space Biology experiments. Explore and share pathways and associated genes from different categories in Microbe Space Biology and pull insights that could be applicable to your own projects! We encourage AWG members to review pathways and associated gene lists from other AWGs too. More information followed on each category's directory...
 
 ## Categories for Pathways/Genes from Microbe Space Biology:
 
