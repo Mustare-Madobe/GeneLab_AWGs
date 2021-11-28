@@ -1,9 +1,7 @@
 # Code In Development
 
-This directory holds code that is currently in development. The following sub-directories contain code related to the topic indicated in the title. If an AWG member would like to add code that is not related to the topics listed, please create a new sub-directory with a relevant title.
-
----
+This directory holds code that is currently in development for Plants AWG projects. Review what other members are working on and contact them to collaborate if you are interested! More information followed on each topic's directory... 
 
 ## Code Development Topics:
 
-- [GLAP](RACARA-GLAP)
+- [RACARA-GLAP](RACARA-GLAP)
