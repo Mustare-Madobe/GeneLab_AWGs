@@ -5,6 +5,7 @@ Neeka Sewnath
 nsewnath@ufl.edu
 
 # Note: Must be run with Python 3.x
+# Need to install lxml (pip install lxml)
 """
 
 #===========================================================================================================================================
@@ -12,6 +13,7 @@ nsewnath@ufl.edu
 from bs4 import BeautifulSoup
 import requests
 import argparse
+import urllib.request
 
 #===========================================================================================================================================
 
@@ -45,6 +47,16 @@ def main():
 
     # Parse html content
     soup = BeautifulSoup(html_content, "lxml")
+
+    # TODO: pull csv and store in data dict
+    # ex: data_dict = {csv_name: csv_data}
+    # one way potentially to do this is to 
+    # use  urllib.request to navigate to each url within the 
+    # API pull data frame 
+
+    # just called filename
+
+
 
 
 #===========================================================================================================================================
