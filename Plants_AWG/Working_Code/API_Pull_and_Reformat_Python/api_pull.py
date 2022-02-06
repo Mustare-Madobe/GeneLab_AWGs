@@ -10,10 +10,12 @@ nsewnath@ufl.edu
 
 #===========================================================================================================================================
 
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
 from bs4 import BeautifulSoup
 import requests
 import argparse
-import urllib.request
+
 
 #===========================================================================================================================================
 
@@ -45,18 +47,32 @@ def main():
     # Fetch raw html content
     html_content = requests.get(url).text
 
+    # Set up driver for link clicks
+    # driver = webdriver.Chrome(ChromeDriverManager().install())
+    # driver.get(url)
+
     # Parse html content
-    soup = BeautifulSoup(html_content, "lxml")
+    soup = BeautifulSoup(html_content, "html.parser")
+    print(soup)
+    
+    # TODO take that dataframe in soup, get a list of all the 
+    # csv file names, and then use driver to click each link
+    # hopefully we can store those new links in a new array 
+    # and then essentially open each link with pandas 
 
-    # TODO: pull csv and store in data dict
-    # ex: data_dict = {csv_name: csv_data}
-    # one way potentially to do this is to 
-    # use  urllib.request to navigate to each url within the 
-    # API pull data frame 
-
-    # just called filename
+    # TODO: Extract data frame from soup
+    table = soup.find_all('var_data', attrs={})
+    print(table)
 
 
+    #for i in csv_array
+    #    csv_link = driver.find_element_by_link_text(csv_names)
+    #    csv_address = csv_link.click()
+        # store the csv address
+
+    
+
+  
 
 
 #===========================================================================================================================================
