@@ -15,6 +15,8 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import requests
 import argparse
+import json
+import re
 
 
 #===========================================================================================================================================
@@ -52,8 +54,7 @@ def main():
     # driver.get(url)
 
     # Parse html content
-    soup = BeautifulSoup(html_content, "html.parser")
-    print(soup)
+    soup = BeautifulSoup(html_content, "lxml")
     
     # TODO take that dataframe in soup, get a list of all the 
     # csv file names, and then use driver to click each link
@@ -61,16 +62,31 @@ def main():
     # and then essentially open each link with pandas 
 
     # TODO: Extract data frame from soup
-    table = soup.find_all('var_data', attrs={})
-    print(table)
+    # raw_table = soup.find_all('data')
+    # print(raw_table)
 
+    scripts = soup.find_all('div', attrs={'class': ''} )
+    print(scripts)
+    # p = re.compile('var table_body = (.*?);')
+    # m = p.match(scripts)
+    # stocks = json.loads(m.groups()[0])
+    # print(stocks)
+
+    # for script in scripts:
+    #     if(pattern.match(str(script.string))):
+    #         data = pattern.match(script.string)
+    #         stock = json.loads(data.groups()[0])
+    #         print (stock)
 
     #for i in csv_array
     #    csv_link = driver.find_element_by_link_text(csv_names)
-    #    csv_address = csv_link.click()
+    #    csv_address = csv_link
+    # .click()
         # store the csv address
 
     
+# >>> table = soup.find('table', {'class': 'details'})
+# >>> th = table.find('th', text='Issued on:')
 
   
 
