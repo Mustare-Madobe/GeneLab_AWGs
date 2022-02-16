@@ -10,14 +10,14 @@ nsewnath@ufl.edu
 
 #===========================================================================================================================================
 
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium import webdriver
+#from webdriver_manager.chrome import ChromeDriverManager
+#from selenium import webdriver
 from bs4 import BeautifulSoup
+import pandas as pd
 import requests
 import argparse
 import json
 import re
-
 
 #===========================================================================================================================================
 
@@ -54,41 +54,20 @@ def main():
     # driver.get(url)
 
     # Parse html content
-    soup = BeautifulSoup(html_content, "lxml")
-    
-    # TODO take that dataframe in soup, get a list of all the 
-    # csv file names, and then use driver to click each link
+    soup = BeautifulSoup(html_content, "html.parser")
+
+    # TODO: Extract csv list from soup
+    script = soup.find_all("script")
+    script = str(script)
+    pattern = re.compile('var data = (.*?);')
+    matrix_string = pattern.search(script).group(1)
+    matrix_list = matrix_string.split(",")
+    matrix_list = [i[:-1] for i in matrix_list if "csv" in i]
+    csv_list = [i[:-1] if "]" in i else i for i in matrix_list]
+
+    # TODO use driver to click each link
     # hopefully we can store those new links in a new array 
     # and then essentially open each link with pandas 
-
-    # TODO: Extract data frame from soup
-    # raw_table = soup.find_all('data')
-    # print(raw_table)
-
-    scripts = soup.find_all('div', attrs={'class': ''} )
-    print(scripts)
-    # p = re.compile('var table_body = (.*?);')
-    # m = p.match(scripts)
-    # stocks = json.loads(m.groups()[0])
-    # print(stocks)
-
-    # for script in scripts:
-    #     if(pattern.match(str(script.string))):
-    #         data = pattern.match(script.string)
-    #         stock = json.loads(data.groups()[0])
-    #         print (stock)
-
-    #for i in csv_array
-    #    csv_link = driver.find_element_by_link_text(csv_names)
-    #    csv_address = csv_link
-    # .click()
-        # store the csv address
-
-    
-# >>> table = soup.find('table', {'class': 'details'})
-# >>> th = table.find('th', text='Issued on:')
-
-  
 
 
 #===========================================================================================================================================
