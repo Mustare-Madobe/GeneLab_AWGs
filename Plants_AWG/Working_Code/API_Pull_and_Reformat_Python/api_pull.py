@@ -46,41 +46,29 @@ def main():
     args = get_args()
     url = args.url
 
-    # Fetch raw html content
-    html_content = requests.get(url).text
+    reqs = requests.get(url)
+    soup = BeautifulSoup(reqs.text, 'html.parser')
 
-    # Parse html content
-    soup = BeautifulSoup(html_content, "html.parser")
+    urls = []
 
-    # Extract csv list from soup
-    script = soup.find_all("script")
-    script = str(script)
-    pattern = re.compile('var data = (.*?);')
-    matrix_string = pattern.search(script).group(1)
-    matrix_list = matrix_string.split(",")
-    matrix_list = [i[:-1] for i in matrix_list if "csv" in i]
-    csv_list = [i[:-1] if "]" in i else i for i in matrix_list]
+    for link in soup.find_all('a'):
+        urls.append(link.get('href'))
 
-    new_csv_list = [i.strip("") for i in csv_list]
+    # Get rid of weird Nonetype
+    urls.pop(0)
 
-    # TODO: remove quotes
-    for i in new_csv_list:
-        print(i)
+    # Isolate the csv links
+    csv_urls = [i for i in urls if "csv" in i] 
 
-    # TODO use driver to click each link
-    # hopefully we can store those new links in a new array 
-    # and then essentially open each link with pandas 
+    # I think this is correct, just need to confirm that there is a lot of 
+    # repetitive urls for the csv files 
 
-    # The goal here is to just get the url associated with each click and add to a list
-
-    # Set up driver for link clicks
-    # driver = webdriver.Chrome(ChromeDriverManager().install())
-    # driver.get(url)
-
-    # for i in csv_list: 
-    #     element = driver.find_element_by_link_text(i)
-    #     element.click()
-
+    # WIP: Create dataset list
+    dataset_dictionary = [] 
+    i = 1
+    for i in csv_urls:
+        df_name = "dataset_" + str(i)
+        df = pd.read_csv(csv_url)
 
 
 #===========================================================================================================================================
