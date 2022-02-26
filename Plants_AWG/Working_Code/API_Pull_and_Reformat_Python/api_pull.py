@@ -5,7 +5,9 @@ Neeka Sewnath
 nsewnath@ufl.edu
 
 # Note: Must be run with Python 3.x
-# Need to install lxml (pip install lxml)
+# Need to install fsspec dependency 
+# For Mac OS, needed to navigate to Macintosh HD > Applications > Python3.x folder 
+#   > double click on "Install Certificates.command" file
 """
 
 #===========================================================================================================================================
@@ -57,19 +59,19 @@ def main():
     # Get rid of weird Nonetype
     urls.pop(0)
 
-    # Isolate the csv links
+    # Isolate and add quotes to the csv links
     csv_urls = [i for i in urls if "csv" in i] 
+    csv_urls = ['"' + i + '"' for i in csv_urls]
 
-    # I think this is correct, just need to confirm that there is a lot of 
-    # repetitive urls for the csv files 
-
-    # WIP: Create dataset list
-    dataset_dictionary = [] 
-    i = 1
+    # WIP: Create dataset list and populate it with uploaded datasets
+    # TODO: figure out weird http issue that arises from making data list
+    data_list = []
     for i in csv_urls:
-        df_name = "dataset_" + str(i)
-        df = pd.read_csv(csv_url)
+        api_data = pd.read_csv(i)
+        data_list.append(api_data)
 
+    # test_data = pd.read_csv("https://visualization.genelab.nasa.gov/GLOpenAPI/samples/?study.characteristics.organism=Arabidopsis thaliana&file.datatype=unnormalized counts&format=csv")
+    # print(test_data)
 
 #===========================================================================================================================================
 
