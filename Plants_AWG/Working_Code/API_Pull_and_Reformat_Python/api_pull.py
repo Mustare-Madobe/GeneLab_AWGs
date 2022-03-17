@@ -8,19 +8,34 @@ nsewnath@ufl.edu
 # Need to install fsspec dependency 
 # For Mac OS, needed to navigate to Macintosh HD > Applications > Python3.x folder 
 #   > double click on "Install Certificates.command" file
+
+# Note: install chromedriver and set executable path 
 """
 
 #===========================================================================================================================================
 
-#from webdriver_manager.chrome import ChromeDriverManager
-#from selenium import webdriver
-from bs4 import BeautifulSoup
-import pandas as pd
 import requests
 import argparse
-import json
 import re
-import urllib
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+# from selenium.webdriver.remote.webelement import webelement
+# from selenium.webdriver.support.wait import WebDriverWait
+# from selenium_move_cursor.MouseActions import move_to_element_chrome
+# from selenium.webdriver.common.keys import keys
+from selenium.webdriver.chrome.options import Options
+# import js
+# import json 
+# import numpy as np
+# import time
+# import pandas as pd
+# from bs4 import BeautifulSoup
+# import ctypes 
 
 #===========================================================================================================================================
 
@@ -48,10 +63,11 @@ def main():
     args = get_args()
     url = args.url
 
+    
     """
     Research Notes
 
-    I think this isn't looking right because the way I'm trying to scrap the href is wrong. W
+    I think this isn't looking right because the way I'm trying to scrape the href is wrong. W
     Here's what the actual link to the data looks like 
     <a class="file" href="https://visualization.genelab.nasa.gov/GLOpenAPI/data/?study.characteristics.organism=Arabidopsis thaliana&amp;file.datatype=unnormalized counts&amp;file.filename=GLDS-37_rna_seq_Unnormalized_Counts.csv&amp;format=raw">GLDS-37_rna_seq_Unnormalized_Counts.csv</a>
     
@@ -76,10 +92,40 @@ def main():
 
     """
 
-    reqs = requests.get(url)
-    soup = BeautifulSoup(reqs.text, 'html.parser')
+    opts = Options()
+    opts.add_argument('- headless')
+    driver = webdriver.Chrome('./chromedriver', options = opts)
 
-    urls = []
+    driver.maximize_window()
+    driver.get(url)
+    driver.implicitly_wait(220)
+
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(5)
+    
+    file_ws_results = driver.find_elements_by_xpath("//a[contains(@class,'file')]")
+    total_ws_results=len(file_ws_results)
+
+    csv_urls = set()
+    for i in  range(0,len(file_ws_results)):
+        csv = file_ws_results[i]
+        try:
+            csv.click()
+            time.sleep(2)
+            actual_csv = driver.find_elements_by_css_selector('file')
+            for actual_csv in actual_csv:
+                if actual_csv.get_attribute('src') and 'https' in actual_csv.get_attribute('src'):
+                    csv_urls.add(actual_csv.get_attribute('src'))
+        except ElementClickInterceptedException or ElementNotInteractableException as err:
+            print(err)
+
+
+
+    # reqs = requests.get(url)
+    # soup = BeautifulSoup(reqs.text, 'html.parser')
+
+    # urls = []
+
 
     # This one doesn't find anything 
     # for link in soup.find_all("a", {"class": "file"}):
