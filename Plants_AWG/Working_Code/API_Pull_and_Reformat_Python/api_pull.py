@@ -16,26 +16,10 @@ nsewnath@ufl.edu
 
 import requests
 import argparse
-import re
-import time
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-# from selenium.webdriver.remote.webelement import webelement
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium_move_cursor.MouseActions import move_to_element_chrome
-# from selenium.webdriver.common.keys import keys
-from selenium.webdriver.chrome.options import Options
-# import js
-# import json 
-# import numpy as np
-# import time
-# import pandas as pd
-# from bs4 import BeautifulSoup
-# import ctypes 
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 #===========================================================================================================================================
 
@@ -91,82 +75,21 @@ def main():
     doesn't involve any hardcoding. 
 
     """
+    #install driver NOTE: sometimes takes a while
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
-    opts = Options()
-    opts.add_argument('- headless')
-    driver = webdriver.Chrome('./chromedriver', options = opts)
-
-    driver.maximize_window()
+    #load url using driver: 
     driver.get(url)
-    driver.implicitly_wait(220)
 
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(5)
-    
-    file_ws_results = driver.find_elements_by_xpath("//a[contains(@class,'file')]")
-    total_ws_results=len(file_ws_results)
+    # get element 
+    element = driver.find_elements_by_xpath("//a[contains(@class,'file')]")
+    driver.quit()
 
-    csv_urls = set()
-    for i in  range(0,len(file_ws_results)):
-        csv = file_ws_results[i]
-        try:
-            csv.click()
-            time.sleep(2)
-            actual_csv = driver.find_elements_by_css_selector('file')
-            for actual_csv in actual_csv:
-                if actual_csv.get_attribute('src') and 'https' in actual_csv.get_attribute('src'):
-                    csv_urls.add(actual_csv.get_attribute('src'))
-        except ElementClickInterceptedException or ElementNotInteractableException as err:
-            print(err)
+    # get html inside attribute
+    all_htmls = []
+    [all_htmls.append(i.get_attribute("innerHTML")) for i in element]
+    #NOTE: ^ this code raises MaxRetryError ^
 
-
-
-    # reqs = requests.get(url)
-    # soup = BeautifulSoup(reqs.text, 'html.parser')
-
-    # urls = []
-
-
-    # This one doesn't find anything 
-    # for link in soup.find_all("a", {"class": "file"}):
-    #     print(link)
-    #     urls.append(link.get('href'))
-
-    # urls = []
-
-    # for link in soup.find_all('a'):
-    #     print(link)
-    #     urls.append(link.get('href'))
-
-    # # Get rid of weird Nonetype
-    # urls.pop(0)
-
-    # # add url spaces to base urls
-    # urls = [i.replace(" ", "%20") for i in urls]
-
-    # print(urls)
-
-    #TODO: Unfortunately the code below is pulling the wrong links 
-
-    # for link in soup.find_all('a'):
-    #     urls.append(link.get('href'))
-
-    # # Get rid of weird Nonetype
-    # urls.pop(0)
-
-    # # add url spaces to base urls
-    # urls = [i.replace(" ", "%20") for i in urls]
-
-    # print(urls[7])
-
-    # # Isolate and add quotes to the csv links
-    # csv_urls = [i for i in urls if "csv" in i] 
-    # csv_urls = ['"' + i + '"' for i in csv_urls]
-
-    # add url spaces to base urls
-    # csv_urls = [i.replace(" ", "%20") for i in csv_urls]
-
-    # WIP: Create dataset list and populate it with uploaded datasets
 
 #===========================================================================================================================================
 
