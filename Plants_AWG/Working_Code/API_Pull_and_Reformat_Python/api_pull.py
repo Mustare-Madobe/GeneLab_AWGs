@@ -9,7 +9,6 @@ nsewnath@ufl.edu
 # For Mac OS, needed to navigate to Macintosh HD > Applications > Python3.x folder 
 #   > double click on "Install Certificates.command" file
 
-# Note: install chromedriver and set executable path 
 """
 
 #===========================================================================================================================================
@@ -20,6 +19,9 @@ import argparse
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+
+from functools import reduce
+import time
 
 #===========================================================================================================================================
 
@@ -81,15 +83,93 @@ def main():
     #load url using driver: 
     driver.get(url)
 
+    # this isolates the table, but it's not really useful for what we want
+    # data = driver.execute_script('return data')
+
+
+    # scroll down
+    #driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    """
+
+    Research Notes: 
+
+    Sadly I don't think the scroll down method above will work for us since we are scrolling within a table 
+    within the webpage. The code above tries to scroll through the entire webpage, which doesn't change anything.
+
+    So it should be sort of straight forward, I'm guessing the class is literally just "table", looking at 
+    the page html we see this: 
+
+    "var data = [["GLDS-120","gse94983_transcription_profiling_RNA_Sequencing_(RNA-Seq)"...."
+
+    I'm pretty sure we can just try to scroll through that element using the info above. 
+
+    How do we scroll through a javascript element with selenium?
+
+    """
+
+
+    element = driver.find_element_by_id("data")
+
+    element.send_keys(Keys.PAGE_DOWN)
+
+    # from selenium.webdriver.common.action_chains import ActionChains
+
+    # element = driver.find_element_by_id("grid")
+
+    # driver.execute_script("arguments[0].scrollIntoView();", element)
+
+
+    #n_element = driver.findElement(By.id("id_of_element"))
+    
+    # driver.find_element('data')
+    
+    # ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element)
+    # Thread.sleep(500); 
+
+    # element = driver.find_element_by_xpath("//a[contains('data')]")
+    # for i in range(60):
+    # driver.execute_script("arguments[0].scrollBy(0, 500)", element)
+    # time.sleep(2)
+
+    #data = driver.find_element_by_id("body")
+
+    #data = driver.execute_script('return data')
+
+    #driver.execute_script("document.getElementById('data').scrollIntoView();")
+
+    # locate table window 
+    #ele_table = driver.find_elements_by_xpath("//div[@class='ui-widget-content']")
+
+    #driver.execute_script("document.getElementById('ele_table').scrollIntoView();")
+
+    # scroll down table window
+    
+    #driver.execute_script("scrollBy(0, 1080)", ele_table)
+
+
+    #TODO: figure out how to locate table var with driver, scroll down with driver, then get elements with driver
+
+   # grid = driver.execute_script('return grid')
+
+   # driver.execute_script("document.getElementById('grid').scrollIntoView();")
+
+    # grid = driver.execute_script('return ui-widget-content')
+
+    # driver.execute_script("document.getElementById('grid').scrollIntoView();")
+
     # get element 
     element = driver.find_elements_by_xpath("//a[contains(@class,'file')]")
-    driver.quit()
 
     # get html inside attribute
     all_htmls = []
-    [all_htmls.append(i.get_attribute("innerHTML")) for i in element]
-    #NOTE: ^ this code raises MaxRetryError ^
 
+    for i in element: 
+        x = i.get_attribute("href")
+        all_htmls.append(x)
+
+    # get unique urls 
+    unq_urls = reduce(lambda l, x: l.append(x) or l if x not in l else l, all_htmls, [])
 
 #===========================================================================================================================================
 
