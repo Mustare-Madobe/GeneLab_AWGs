@@ -10,6 +10,7 @@ GeneLab is a science collaboration initiative that provides an open-access data 
 - [Multi-omics AWG](Multi-omics_AWG)
 - [Plants AWG](Plants_AWG)
 - [AI/ML AWG](AI-ML_AWG)
+- [ALSDA AWG](ALSDA_AWG)
 
 ---
 #### Maintained by: Alex DongHyeon Seo (Plants AWG)
