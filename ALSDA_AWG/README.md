@@ -13,3 +13,6 @@ The purpose of the ALSDA AWG is to solicit feedback from the science community r
 - [Manuscript Code](Manuscript_Code)
 - [Working Code](Working_Code)
 - [ALSDA Space Biology References](ALSDA_Space_Biology_References)
+- [ALSDA Ongoing Projects](https://docs.google.com/document/d/1rmqocmD6rPIGKu5E1VSaol7TuatHDOmVzfvs2YL1BYY/edit#heading=h.95b7h6a5lge5)
+- [ALSDA Completed Projects](https://docs.google.com/document/d/1f-V5FsksI2136EvUGJVK0XaLJzp61tFWMNXOJAw8V7Q/edit#heading=h.skv70enopj64)
+
