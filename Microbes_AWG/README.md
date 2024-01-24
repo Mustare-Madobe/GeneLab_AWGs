@@ -14,3 +14,6 @@ The Microbes Analysis Working group is comprised of researchers focused on analy
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
 - [Microbe Space Biology References](Microbe_Space_Biology_References)
+- [Microbes Ongoing Projects](https://docs.google.com/document/d/1JoSCf5PjzsBbBiKIs1H9xzpXY3p9_ZKAKUFfiNUBukM/edit#heading=h.95b7h6a5lge5)
+- [Microbes Completed Projects](https://docs.google.com/document/d/1h8Xc7LBiGYRj4SGckdnYBsHACU3CMIdHdoJ9kTSnWTs/edit#heading=h.skv70enopj64)
+
