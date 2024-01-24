@@ -12,3 +12,6 @@ The Multi-omics/Systems Biology Analysis Working Group is comprised of research 
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
 - [Multi-omics Space Biology References](Multi-omics_Space_Biology_References)
+- [Multi-omics Ongoing Projects](https://docs.google.com/document/d/1Bs1_bPySkoFpe7xV57Jemh4uugD-U3bzWotHoVi2pGI/edit#heading=h.95b7h6a5lge5)
+- [Multi-omics Completed Projects](https://docs.google.com/document/d/1OhFzVukmcRzFP6BTzL0fAz-VPDdngTgNI-ThwW-yINQ/edit#heading=h.skv70enopj64)
+
