@@ -13,3 +13,6 @@ The Plants Analysis Working Group is comprised of international research scienti
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
 - [Plant Space Biology References](Plant_Space_Biology_References)
+- [Plants Ongoing Projects](https://docs.google.com/document/d/1Xx-xSy7FsGi-s-74_HaDYw-C_3OcdAT2jbB0B4bTP0k/edit#heading=h.95b7h6a5lge5)
+- [Plants Completed Projects](https://docs.google.com/document/d/1uMisuLWh6iKyut0DnNv4tF5A-Xj0vDn6vOyMRAVTF7g/edit#heading=h.skv70enopj64)
+
