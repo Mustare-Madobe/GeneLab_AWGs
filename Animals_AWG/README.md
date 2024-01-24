@@ -13,3 +13,6 @@ The Animals Analysis Working Group is comprised of researchers and professors wo
 - [Working Code](Working_Code)
 - [Relevant Pathway Info](Relevant_Pathway_Info)
 - [Animal Space Biology References](Animal_Space_Biology_References)
+- [Animals Ongoing Projects](https://docs.google.com/document/d/1lE66GX0P1a7RfdYM6ocPLk46IPVRXMiLiPJ50uVS1o0/edit#heading=h.95b7h6a5lge5)
+- [Animals Completed Projects](https://docs.google.com/document/d/1xRg7cEbecSmrXCYkKGqT49alQzLMb4AhWTTZT6q2WV0/edit#heading=h.skv70enopj64)
+
