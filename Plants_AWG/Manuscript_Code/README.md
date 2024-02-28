@@ -6,4 +6,4 @@ This directory holds code that is used in Plants AWG manuscripts. Explore Plants
 
 - [RACARA](RACARA)
 
-- [Meta-analysis of the space flight and microgravity response of the Arabidopsis plant transcriptome]([RACARA](https://www.nature.com/articles/s41526-023-00247-6)https://www.nature.com/articles/s41526-023-00247-6)
+- [Meta-analysis of the space flight and microgravity response of the Arabidopsis plant transcriptome](https://www.nature.com/articles/s41526-023-00247-6)
